@@ -38,6 +38,7 @@ button {
     background : black;
     color : white;
     border : none;
+    cursor:pointer;
 }
 input {
     display : block;

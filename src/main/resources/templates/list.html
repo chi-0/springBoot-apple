@@ -16,7 +16,18 @@
             <a th:href="@{'/detail/' + ${data.id}}" th:text="${data.title}">바지</a>
             <p th:text="${data.price}+원">8만원</p>
             <a th:href="@{'/edit/' + ${data.id}}">✏️</a>
+            <span th:onclick="fetch('/delete?id=[[${data.id}]]',{method:'DELETE'})
+                .then(res =>res.text())
+                .then(()=>{
+                    location.reload();
+                })
+             ">🗑️</span>
         </div>
     </div>
+
+<script>
+
+</script>
+
 </body>
 </html>
